@@ -243,6 +243,38 @@ a { color: inherit; text-decoration: none; }
   font-size: 0.9em;
 }
 
+/* ---------- RSVP form ---------- */
+.rsvp-form { max-width: 520px; margin: 0 auto; text-align: left; }
+.field { margin-bottom: 1.3rem; }
+.field label, .field__label {
+  display: block; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink); margin-bottom: 0.5rem; font-weight: 500;
+}
+.field label span, .field__label span { text-transform: none; letter-spacing: 0; color: var(--muted); font-weight: 400; }
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="number"],
+.field textarea {
+  width: 100%; padding: 0.85rem 1rem;
+  border: 1px solid var(--line); border-radius: 4px; background: var(--white);
+  font-family: var(--sans); font-size: 1rem; color: var(--ink);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+.field textarea { resize: vertical; min-height: 90px; }
+.field input:focus, .field textarea:focus {
+  outline: none; border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(74,99,168,0.15);
+}
+.field input::placeholder, .field textarea::placeholder { color: #a7adbd; }
+.radio-row { display: flex; gap: 1.75rem; flex-wrap: wrap; }
+.radio {
+  display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0;
+  text-transform: none; letter-spacing: 0; font-weight: 400;
+  font-size: 0.98rem; color: var(--ink); cursor: pointer;
+}
+.radio input { accent-color: var(--blue); width: 1.05rem; height: 1.05rem; }
+.rsvp-form .btn { width: 100%; margin-top: 0.4rem; cursor: pointer; }
+
 /* ---------- Directions ---------- */
 .directions__grid {
   display: grid; grid-template-columns: 1.2fr 1fr; gap: 2.5rem; align-items: stretch;

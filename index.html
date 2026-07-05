@@ -184,14 +184,56 @@
     </div>
     <div class="rsvp__body reveal">
       <p>
-        We would be honored to have you join us. Please let us know if you'll be able
-        to celebrate with us.
+        We would be honored to have you celebrate with us. Kindly reply below by
+        <strong>Month Day, Year</strong>.
       </p>
-      <a href="#" class="btn btn--dark">Open RSVP Form</a>
-      <p class="rsvp__hint">
-        Add your Jotform / Google Form link to this button in <code>index.html</code>,
-        or paste the form's embed code here.
-      </p>
+
+      <form class="rsvp-form" action="https://formsubmit.co/shsacks@gmail.com" method="POST">
+        <!-- FormSubmit settings -->
+        <input type="hidden" name="_subject" value="New Wedding RSVP — Shira &amp; Eitan" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://eitanspi.github.io/shira-eitan-wedding/thanks.html" />
+        <!-- Spam honeypot: bots fill this, humans don't see it -->
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none" />
+
+        <div class="field">
+          <label for="rsvp-name">Full name(s)</label>
+          <input id="rsvp-name" name="Name" type="text" required placeholder="First &amp; last name" />
+        </div>
+
+        <div class="field">
+          <label for="rsvp-email">Email</label>
+          <input id="rsvp-email" name="Email" type="email" placeholder="you@example.com" />
+        </div>
+
+        <div class="field">
+          <span class="field__label">Will you attend?</span>
+          <div class="radio-row">
+            <label class="radio"><input type="radio" name="Attending" value="Joyfully accepts" required /> Joyfully accepts</label>
+            <label class="radio"><input type="radio" name="Attending" value="Regretfully declines" /> Regretfully declines</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="rsvp-guests">Number of guests (including you)</label>
+          <input id="rsvp-guests" name="Number of guests" type="number" min="1" max="20" value="1" />
+        </div>
+
+        <div class="field">
+          <label for="rsvp-diet">Dietary restrictions <span>(optional)</span></label>
+          <input id="rsvp-diet" name="Dietary restrictions" type="text" placeholder="Allergies, vegetarian, etc." />
+        </div>
+
+        <div class="field">
+          <label for="rsvp-msg">A note for the couple <span>(optional)</span></label>
+          <textarea id="rsvp-msg" name="Message" rows="3" placeholder="We can't wait!"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn--dark">Send RSVP</button>
+      </form>
+
+      <p class="rsvp__hint">Your reply goes straight to Shira &amp; Eitan.</p>
     </div>
   </section>
 
